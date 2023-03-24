@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+% Command for printing skill overview bubbles
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{Java}\\\textbf{EE},
+        \textbf{Full Stack}\\\textbf{Dev},
+        \textbf{~~~~~~~~OOP~~~~~~~~~},
+        \textbf{~~~~~~Agile~~~~~~}\\\textbf{~~~~},
+        \textbf{~~~~~DevOps~~~~~}
+    }
+}
+
+% Programming skill bars
+\programming{{TDD $\textbullet$  SCRUM / 3.5}, {SQL$\textbullet$ Oracle,DB2,H2,Mysql,PostgreSQL / 3}, {Maven  $\textbullet$  SVN $\textbullet$ GIT / 4}, {C $\textbullet$ bash,ksh  / 3.5}, {JavaScript $\textbullet$ HTML $\textbullet$ CSS $\textbullet$ Angualar 2 / 3}, {Java EE $\textbullet$ Struts $\textbullet$ Spring  $\textbullet$ Hibernate / 4}, {Docker $\textbullet$  Gitlab-CI Jenkins $\textbullet$ Kubernetes / 3}}
+
+% Projects text
+\education{
+\textbf{Diplome ingénieur télécomunications} \\
+Option Génie Logiciel pour les réseaux et les Télécommunications \\
+ENSEIRB-MATMECA  \\
+2008 - 2011 | Bordeaux
+
+\textbf{Licence mathématiques} \\
+Université Joseph-Fourier \\
+2007 | Grenoble
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{Guillaume GESSINN} % Your name
+\cvjobtitle{ Ingénieur Développement Java EE} % Job
+% title/career
+
+\cvlinkedin{/in/guillaume-gessinn}
+\cvgithub{ggn-dev}
+\cvnumberphone{(+33)626875869 } % Phone number
+\cvsite{TODO} % Personal website
+\cvmail{guillaume.gessinn@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+ 
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Expérience}
+
+\begin{twenty} % Environment for a list with descriptions
+    \twentyitem
+   		{Oct 2022 -}
+		{Mars 2023}
+        {Développeur full-stack senior}
+        {\href{https://www.enedis.fr}{ENEDIS}}
+        {\textit{Developpeur dans une équipe de 9 personnes du portail des applications internes du parc informatique du groupe Enedis}}
+        {
+       {\begin{itemize}
+		\item Maintient en conditions opérationelles des modules du portail
+		\item MEP de nouvelles versions de modules sur un cluster Kubernetes en utilisant Jenkins, gitlab-ci, Docker et Helm  
+                \item Migration des bases de données (PostgreSQL)
+                \item Dévoloppement d'un module pour faire des demandes de création de clusters PostgreSQL en angular et en spring boot
+	 \end{itemize}}
+        }
+     \\
+\twentyitem
+    	{Oct 2012 -}
+		{Sept 2022}
+        {Développeur java et c senior}
+        {\href{http://www.tessi.fr/}{Tessi Informatique}}
+        {\textit{Développement en java et c sur des applications d’échange de données informatisé  bancaires}}
+        {\begin{itemize}
+        \item Maintenance applicative et support N3
+        \item Eclatement de messages SWIFT MT101
+        \item Acceptation de virements SEPA sans BIC
+        %\item Mise en place d'accusés de réception PSR1
+        \item Mise en place de nouveaux types de fichiers
+      	{\begin{itemize}
+		\item Intégration de nouveaux formats dans le SI
+		\item Traduction d'un type de format vers un autre (XML,CFONB320,etc...) (xslt, smooks)
+	\end{itemize}}
+	\item Intégration des flux  SEPAmail (spring-batch)
+	%\item Fiabilisation des contrôles de signature EBICS
+	 \item Refonte des processus d'intégration des flux
+	 %\item Mise en place de l’évolution rulebook v9 pour les flux SDD
+	 \item Migration technique de java 1.6 vers java 1.8 des applications
+	 \item Corrections de failles de sécurité avec SonarQube
+	 \item Migration du framework log4j vers logback des applications Java
+	\item Mise en place de spécifications fonctionnelles pour la refonte de la couche métier en WebServices pour la solution d'échange de données utilisée par la caisse d’épargne
+	\item Ecriture de spécifications fonctionnelles pour l’évolution de la norme EBICS 3.0 et développement
+        %{\begin{itemize}
+	%	\item Ecriture de spécifications fonctionnelles de la montée de version du protocole EBICS
+	%	\item Suivi et support fonctionnel aux développeurs mettant en place la solution
+	%\end{itemize}}
+	\item Aide la migration des données vers une solution interne pour la caisse d'épargne
+        {\begin{itemize}
+                \item Support technique et fonctionnel de la solution à migrer
+                %\item Support technique pour la conception de requêtes SQL et de scripts ksh
+                \item Suivi des incidents et plannification des livraisons
+	\end{itemize}}
+        \item Mise en place de la signature déportéee pour EBICS 3.0
+        \item Mise en place de l'authentification SSO avec SAML V2 (SP vers IDP)
+        \item Mise en place d'une solution d'archivage des flux vers une GED
+        \end{itemize}}
+        \\
+	\twentyitem
+    	{Mai 2012 -}
+		{Sept 2012}
+        {Développeur java junior}
+        {\href{http://www.casino-restauration.com/}{Casino Restauration}}
+        {}
+        {
+ {\begin{itemize}
+		\item Développement de la refonte de la tarification sur un logiciel de gestion de recettes/formules
+		{\begin{itemize}
+			\item Analyse des spécifications fonctionnelles et techniques
+			\item Développement de la solution avec Spring, Hibernate, Javascript, JSP SQL Server, DBUnit et JMock
+			\item Démonstration au client du fonctionnement de l’application
+ 		 \end{itemize}}
+    \end{itemize}}
+        }
+    \\   
+    \twentyitem
+   		{Févr 2011 -}
+		{Juill 2011}
+        {Ingénieur études et développement java stagiaire}
+        {\href{https://atos.net/fr/solutions?utm_source=bull.fr/&utm_medium=301}{Bull}}
+        {\textit{Spécification et développement d’un générateur de séries de diapositives pour une application web (gestion des examens du code de la route) pour une solution utilisée par le ministère du développement durable}}
+        {
+       {\begin{itemize}
+		\item Mise en place d’un moteur de règles pour générer des séries de diapositives avec Drools
+		\item Création d’un menu de gestion des règles dans une application Web avec Struts et Hibernate
+	 \end{itemize}}
+        }
+     \\
+     \twentyitem
+   		{Juin 2010 -}
+		{Sept 2010}
+        {Développeur C stagiaire}
+        {\href{}{OVIV}}
+        {\textit{Dans une société fabriquant des solutions de sécurité pour les parcs aériens, au sein d’une petite équipe, responsable de la réalisation d’un serveur permettant la mise en relation de systèmes mobiles.
+}}
+        {
+        \begin{itemize}
+      	  \item Mise en place d’un serveur de mise en relation de systèmes mobiles
+      	  \item  Création d’une application web de gestion des utilisateurs
+    \end{itemize}
+    	}  
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+nd{twenty}
+
+
+\end{document} 
